@@ -1,0 +1,152 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #242223bd;
+    --accent-color: pink;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.navbar_logo {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.navbar_logo i {
+    color: var(--accent-color);
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.navbar_login {
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_login li {
+    padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--accent-color);
+    display: none;
+}
+
+.nav_line {
+    width: 100%;
+    position: absolute;
+    border: rgba(0, 0, 0, .12) solid 1.5px;
+    margin-top: 3px;
+}
+
+section {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 15px;
+    display: flex;
+}
+
+.section_column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5%;
+}
+
+.section_suvice_introduce {
+    border: 2px black solid;
+    height: 705px;
+    width: 45%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.section_how_to_use {
+    border: 2px black solid;
+    height: 340px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.section_none {
+    border: 2px black solid;
+    height: 340px;
+    margin-top: 21px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.footer_bar {
+    border: 2px black solid;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 30px;
+    margin-top: 15px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+@media screen and (max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_login {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toogleBtn {
+        display: block;
+    }
+    .navbar_menu.active,
+    .navbar_login.active {
+        display: flex;
+    }
+}
