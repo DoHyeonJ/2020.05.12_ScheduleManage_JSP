@@ -12,8 +12,6 @@
     <script src="main.js" defer></script>
     <title>ScheduleManager</title>
 </head>
-
-<body>
     <nav class="navbar">
         <div class="navbar_logo">
             <i class="far fa-calendar-check"></i>
